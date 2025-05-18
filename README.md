@@ -1,0 +1,1 @@
+Command block parancsok ellenőrzése
