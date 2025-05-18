@@ -1,11 +1,7 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-image: url('command_block_background.png'); /* Cseréld le a kép elérési útját! */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #eee; /* Világos szöveg a sötét háttéren */
+    background-color: #f0f0f0; /* Világosszürke háttér */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,44 +9,51 @@ body {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.7); /* Áttetsző fekete háttér a tartalomnak */
+    background-color: #fff;
     padding: 30px;
     border-radius: 10px;
-    text-align: center; /* Középre igazítja a címet */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
     width: 80%;
     max-width: 600px;
 }
 
-.title {
-    font-family: 'Minecraft', monospace; /* Ha van ilyen betűtípus */
-    color: #f0e68c; /* Arany szín */
+h1 {
+    color: #333;
     margin-bottom: 20px;
-    font-size: 2.5em;
 }
 
-.input-area {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-}
-
-textarea {
+input[type="file"] {
     padding: 10px;
-    border: 2px solid #555;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    font-family: monospace;
-    font-size: 1em;
-    resize: vertical; /* Függőlegesen lehessen átméretezni */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.image-container {
+    width: 100%; /* A konténer szélessége */
+    max-height: 300px; /* Maximális magasság a képnek */
+    border: 2px dashed #ccc;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ha a kép nagyobb, mint a konténer */
+}
+
+#uploadedImage {
+    max-width: 100%;
+    max-height: 100%;
+    display: none; /* Kezdetben rejtett */
 }
 
 button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background-color: #007bff; /* Kék gomb */
     color: white;
     font-size: 1em;
     cursor: pointer;
@@ -58,16 +61,21 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 #feedbackArea {
     margin-top: 15px;
     padding: 10px;
-    border: 1px solid #777;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #222;
-    color: #ddd;
+    background-color: #f9f9f9;
+    color: #555;
     font-size: 0.9em;
     text-align: left;
 }
