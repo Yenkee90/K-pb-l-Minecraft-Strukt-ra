@@ -49,6 +49,14 @@ input[type="file"] {
     display: none; /* Kezdetben rejtett */
 }
 
+#pixelatedCanvas {
+    display: none;
+    border: 1px solid #ccc;
+    margin-bottom: 20px; /* Hozzáadtam egy kis margót alá */
+    max-width: 100%; /* Hogy ne lógjon ki a konténerből */
+    height: auto; /* Automatikus magasság a képarány megőrzéséhez */
+}
+
 button {
     padding: 10px 20px;
     border: none;
