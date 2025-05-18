@@ -1,52 +1,73 @@
-/* Fekete háttér, fehér szöveg */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: black;
-    color: white;
+    font-family: sans-serif;
     margin: 0;
-    padding: 20px;
+    background-image: url('command_block_background.png'); /* Cseréld le a kép elérési útját! */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #eee; /* Világos szöveg a sötét háttéren */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Címsor */
-h1 {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-/* Beviteli mező */
-textarea {
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Áttetsző fekete háttér a tartalomnak */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center; /* Középre igazítja a címet */
     width: 80%;
-    height: 100px;
-    font-size: 16px;
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid white;
-    background-color: white;
-    color: black;
+    max-width: 600px;
 }
 
-/* Gomb */
+.title {
+    font-family: 'Minecraft', monospace; /* Ha van ilyen betűtípus */
+    color: #f0e68c; /* Arany szín */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+textarea {
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-family: monospace;
+    font-size: 1em;
+    resize: vertical; /* Függőlegesen lehessen átméretezni */
+}
+
 button {
-    padding: 12px;
-    font-size: 18px;
-    background-color: white;
-    color: black;
-    border: 2px solid white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: grey;
+    background-color: #45a049;
 }
 
-/* Eredmény szöveg */
-p#result {
-    font-size: 18px;
+#feedbackArea {
     margin-top: 15px;
-    background-color: white;
-    color: black;
     padding: 10px;
-    display: inline-block;
-    width: 80%;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #222;
+    color: #ddd;
+    font-size: 0.9em;
+    text-align: left;
 }
