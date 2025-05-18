@@ -1,11 +1,10 @@
-function analyzeCode() {
-    const input = document.getElementById("commandInput").value.trim();
-    const result = document.getElementById("result");
+document.addEventListener('DOMContentLoaded', () => {
+    const commandInput = document.getElementById('commandInput');
+    const analyzeButton = document.getElementById('analyzeButton');
+    const feedbackArea = document.getElementById('feedbackArea');
 
-    if (!input.startsWith("/")) {
-        result.textContent = "❌ Hiba: A parancs nem kezdődik '/'-jelzéssel!";
-        return;
-    }
-
-    result.textContent = "✅ A parancs megfelelő!";
-}
+    analyzeButton.addEventListener('click', () => {
+        const command = commandInput.value;
+        feedbackArea.textContent = `Elemzésre vár: ${command}`;
+    });
+});
