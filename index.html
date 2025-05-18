@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kódrevizor</title>
+    <title>Képből Minecraft Struktúra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Kódrevizor</h1>
-        <div class="input-area">
-            <textarea id="commandInput" placeholder="Írd be a Minecraft parancsot..."></textarea>
-            <button id="analyzeButton">Elemzés</button>
-            <div id="feedbackArea"></div>
+        <h1>Képből Minecraft Struktúra</h1>
+        <input type="file" id="imageUpload" accept="image/*">
+        <div class="image-container">
+            <img id="uploadedImage" src="#" alt="Feltöltött kép">
         </div>
+        <button id="nextButton" disabled>Tovább</button>
+        <div id="feedbackArea"></div>
     </div>
     <script src="script.js"></script>
 </body>
